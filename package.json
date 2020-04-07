@@ -15,6 +15,7 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
+    "page": "^1.11.5",
     "rxfire": "^3.11.2",
     "rxjs": "^6.5.5"
   }

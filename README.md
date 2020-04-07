@@ -1,4 +1,4 @@
-This is a sample todo svelte + firebase app template inspired by a [fireship.io](https://fireship.io) article "[Svelte Realtime Todo List with Firebase](https://fireship.io/lessons/svelte-v3-overview-firebase/)" by [Jeff Delaney](https://fireship.io/contributors/jeff-delaney/).
+This is a sample todo svelte + page.js + firebase app template inspired by a [fireship.io](https://fireship.io) article "[Svelte Realtime Todo List with Firebase](https://fireship.io/lessons/svelte-v3-overview-firebase/)" by [Jeff Delaney](https://fireship.io/contributors/jeff-delaney/).
 You can use this template as starter project for your svelte firebase app. 
 
 # Setup
