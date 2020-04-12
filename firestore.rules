@@ -3,7 +3,8 @@ service cloud.firestore {
   match /databases/{database}/documents {
     match /todos/{todo} {
       allow read, delete: if request.auth.uid == resource.data.uid;
-      allow create: if request.auth.uid == request.resource.data.uid;
+      allow create: if request.auth.uid == request.resource.data.uid &&
+      	request.resource.data.text != '';
       allow update: if request.auth.uid == resource.data.uid &&
       	request.auth.uid == request.resource.data.uid;
     }

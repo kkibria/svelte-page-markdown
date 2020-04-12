@@ -8,7 +8,7 @@
     export let uid;
 
     // Form Text
-    let text = 'some task';
+    let text = '';
 
     // Query requires an index, see screenshot below
     const query = db.collection('todos').where('uid', '==', uid).orderBy('created');
@@ -16,8 +16,10 @@
     const todos = collectionData(query, 'id').pipe(startWith([]));
 
     function add() {
-        db.collection('todos').add({ uid, text, complete: false, created: Date.now() });
-        text = '';
+        if (text != '') {
+            db.collection('todos').add({ uid, text, complete: false, created: Date.now() });
+            text = '';
+        }
     }
 
     function updateStatus(event) {
@@ -44,6 +46,6 @@
 </ul>
 
 
-<input bind:value={text}>
+<input bind:value={text} placeholder="Enter task description">
 
-<button on:click={add}>Add Task</button>
+<button on:click={add} disabled='{text == ''}'>Add Task</button>
