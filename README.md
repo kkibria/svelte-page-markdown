@@ -51,6 +51,11 @@ Copy the Web client ID and save setting.  Lets say this value is ``somerandomstu
 ### Collection
 The collection ``todos`` will be created by the app automatically since the rule will allow creating a `todo` document inside the collection. You can check the firestore contents in firebase console while the app is running.
 
+
+## Tailwind
+Tailwind has already added to the template using instruction from the article,
+[Installating Svelte & Integrating Tailwind CSS (and PostCSS)](https://jackwhiting.co.uk/posts/setting-up-svelte-and-integrating-tailwind-css/). 
+
 # Get started
 
 Install the dependencies,
@@ -58,6 +63,7 @@ Install the dependencies,
 ```bash
 npm install
 ```
+
 
 Start [Rollup](https://rollupjs.org),
 

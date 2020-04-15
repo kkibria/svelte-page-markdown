@@ -1,6 +1,7 @@
 <script>
 	export const name = 'someapp';
 
+    import Tailwindcss from './Tailwindcss.svelte';
     import Profile from './Profile.svelte';
     import Todos from './Todos.svelte';
 
@@ -18,6 +19,8 @@
 
 
 <section>
+<h1 class="font-bold">A Page blog</h1>
+
 {#if user}
     <Profile {...user} />
     <button on:click={ () => auth.signOut() }>Logout</button>
@@ -31,3 +34,9 @@
 <hr>
 <p><a href='https://github.com/kkibria/svelte-todo'>source code in github</a></p>
 </section>
+
+<style lang="postcss">
+h1 {
+  @apply font-bold text-2xl;
+}
+</style>
