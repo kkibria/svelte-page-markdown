@@ -8,6 +8,9 @@
     import { auth, googleProvider } from './firebase';
     import { authState } from 'rxfire/auth';
 
+    import Navbar from './routing/Navbar.svelte';
+
+
     let user;
 
     const unsubscribe = authState(auth).subscribe(u => user = u);
@@ -20,6 +23,8 @@
 
 <section>
 <h1 class="font-bold">A Page blog</h1>
+
+<Navbar/>
 
 {#if user}
     <Profile {...user} />
