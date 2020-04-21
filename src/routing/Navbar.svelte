@@ -1,10 +1,13 @@
 <script>
   import router from "page";
   import routes from "./routes.js";
+  import { userSubscribe } from '../firebase';
 
   let page;
   let params;
-  let user = true;
+
+  let user;
+  const unsubscribe = userSubscribe(u => user = u);
 
   // Iterate through the routes
   routes.forEach(route => {
@@ -34,7 +37,10 @@
   <nav>
     <a href="/">Home</a>
     <a href="/blog">Blog</a>
+  
+{#if user}
     <a href="/private">Secret Page</a>
+{/if}
   </nav>
 </header>
 

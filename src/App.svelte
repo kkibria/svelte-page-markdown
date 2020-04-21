@@ -5,21 +5,17 @@
     import Profile from './Profile.svelte';
     import Todos from './Todos.svelte';
 
-    import { auth, googleProvider } from './firebase';
-    import { authState } from 'rxfire/auth';
+    import { auth, googleProvider, userSubscribe } from './firebase';
 
     import Navbar from './routing/Navbar.svelte';
 
-
     let user;
-
-    const unsubscribe = authState(auth).subscribe(u => user = u);
-
+    const unsubscribe = userSubscribe(u => user = u);
+ 
     function login() {
         auth.signInWithPopup(googleProvider);
     }
 </script>
-
 
 <section>
 <h1 class="font-bold">A Page blog</h1>
