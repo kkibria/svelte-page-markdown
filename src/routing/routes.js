@@ -3,7 +3,7 @@ import Blog from "../pages/Blog.svelte";
 import Article from "../pages/Article.svelte";
 import Private from "../pages/Private.svelte";
 import Login from "../pages/Login.svelte";
-import Error from "../pages/Error.svelte";
+import Error from "../components/Error.svelte";
 
 export default [
   {
