@@ -19,7 +19,7 @@
         "destination": "/index.html"
       }, 
       {
-        "source": "/blog/**",
+        "source": "/blog/*",
         "destination": "/index.html"
       },
       {
