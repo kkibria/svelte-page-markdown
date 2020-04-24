@@ -34,7 +34,7 @@
   div.c-page {
     --header-height: 3%;
     --footer-height: 0%;
-    --content-height: calc(99% - var(--header-height) - var(--footer-height));
+    --content-height: calc(100% - var(--header-height) - var(--footer-height));
   }
   .c-header {
     height: var(--header-height);

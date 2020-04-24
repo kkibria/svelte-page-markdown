@@ -10,9 +10,10 @@
 
 <style>
   div.c-page {
-    --header-height: 10vh;
-    --footer-height: 5vh;
-    --content-height: calc(99vh - var(--header-height) - var(--footer-height));
+    height: 100vh;
+    --header-height: 10%;
+    --footer-height: 5%;
+    --content-height: calc(100% - var(--header-height) - var(--footer-height));
     --header-padding: 1rem;
   }
 
