@@ -28,6 +28,7 @@
   div.c-footer {
     height: var(--footer-height);
     overflow-y: auto;
+    padding-left: var(--header-padding);
   }
 </style>
 
@@ -43,7 +44,7 @@
   <div class="c-footer">
     <hr />
     <p>
-      <a href="https://github.com/kkibria/svelte-page-blog">source code in github</a>
+      <a href="https://github.com/kkibria/svelte-page-blog">Source code in Github</a>
     </p>
   </div>
 </div>

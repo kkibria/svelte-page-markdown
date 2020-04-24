@@ -58,7 +58,7 @@
     <div class="w-1/2">
       <textarea
         bind:value={source}
-        class="c-panel border-black-500" />
+        class="c-panel border-black-500 bg-gray-200"/>
     </div>
 
     <div class="w-1/2">
