@@ -36,7 +36,7 @@
 <style>
 </style>
 
-<main class="h-full">
+<main class="h-full p-4">
   {#if !auth || user}
     <svelte:component this={page} {params} />
   {:else}
