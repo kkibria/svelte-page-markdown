@@ -12,5 +12,5 @@
 	});
 </script>
 
-<h1>{data.title}</h1>
+<h1 class="font-bold">{data.title}</h1>
 <p>{ data.body}</p>

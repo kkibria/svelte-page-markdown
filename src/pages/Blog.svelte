@@ -10,7 +10,7 @@
 	});
 </script>
 
-<h1>Blog</h1>
+<h1 class="font-bold">Blog</h1>
 
 {#each data as item }
     <div>

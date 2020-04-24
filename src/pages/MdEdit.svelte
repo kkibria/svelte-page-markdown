@@ -43,10 +43,10 @@
   div.c-content {
     height: var(--content-height);
   }
-.c-panel {
-  @apply w-full h-full border resize-none p-2;
-}
-
+  .c-panel {
+    overflow-y: auto;
+    @apply w-full h-full border resize-none p-2;
+  }
 </style>
 
 <div class="c-page h-full">
@@ -55,10 +55,10 @@
   </header>
 
   <div class="c-content flex">
-    <div class="w-1/2">
+    <div class="c-md w-1/2">
       <textarea
         bind:value={source}
-        class="c-panel border-black-500 bg-gray-200"/>
+        class="c-panel border-black-500 bg-gray-200" />
     </div>
 
     <div class="w-1/2">

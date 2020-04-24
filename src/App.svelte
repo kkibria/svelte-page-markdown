@@ -25,11 +25,13 @@
   }
   div.c-content {
     height: var(--content-height);
+    overflow-y: auto
   }
   div.c-footer {
     height: var(--footer-height);
     overflow-y: auto;
     padding-left: var(--header-padding);
+    @apply text-white bg-gray-700;
   }
 </style>
 
