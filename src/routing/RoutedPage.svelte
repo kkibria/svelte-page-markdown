@@ -34,17 +34,12 @@
 </script>
 
 <style>
-  main {
-    padding: 20px;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  }
 </style>
 
-<main>
+<main class="h-full">
   {#if !auth || user}
     <svelte:component this={page} {params} />
   {:else}
     <Login/>
   {/if}
-
 </main>

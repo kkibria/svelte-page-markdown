@@ -1,29 +1,37 @@
 <script>
-  import { userSubscribe } from '../firebase';
+  import { userSubscribe } from "../firebase";
 
   let user;
-  const unsubscribe = userSubscribe(u => user = u);
+  const unsubscribe = userSubscribe(u => (user = u));
 </script>
+
+<style>
+  header {
+    padding-top: 1em;
+  }
+  .btn {
+    @apply font-bold px-4 py-2 rounded;
+  }
+  .btn-blue {
+    @apply bg-blue-500 text-white;
+  }
+  .btn-blue:hover {
+    @apply bg-blue-700;
+  }
+  nav a {
+    @apply btn btn-blue mr-4 no-underline;
+  }
+</style>
 
 <header>
   <nav>
     <a href="/">Home</a>
     <a href="/blog">Blog</a>
-{#if user}
-    <a href="/todo">Todo</a>
-    <a href="/private">Secret Page</a>
-{/if}
+    {#if user}
+      <a href="/todo">Todo</a>
+      <a href="/private">Secret Page</a>
+      <a href="/mdedit">Markdown Edit</a>
+    {/if}
     <a href="/login">Login</a>
   </nav>
 </header>
-
-<style>
-  header {
-    padding: 20px;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  }
-  nav a {
-    margin-right: 10px;
-    text-decoration: none;
-  }
-</style>

@@ -1,27 +1,49 @@
 <script>
-	export const name = 'someapp';
+  export const name = "someapp";
 
-    import Navbar from './components/Navbar.svelte';
-    import RoutedPage from './routing/RoutedPage.svelte';
-    import Todos from './components/Todo/Todos.svelte';
- 
-    import Tailwindcss from './Tailwindcss.svelte';
+  import Navbar from "./components/Navbar.svelte";
+  import RoutedPage from "./routing/RoutedPage.svelte";
+  import Todos from "./components/Todo/Todos.svelte";
 
+  import Tailwindcss from "./Tailwindcss.svelte";
 </script>
 
-<section>
-    <h1 class="font-bold">A Page blog</h1>
-    <Navbar/>
-    <hr>
+<style>
+  div.c-page {
+    --header-height: 10vh;
+    --footer-height: 5vh;
+    --content-height: calc(99vh - var(--header-height) - var(--footer-height));
+    --header-padding: 1rem;
+  }
 
-    <RoutedPage></RoutedPage>
- 
-    <hr>
-    <p><a href='https://github.com/kkibria/svelte-todo'>source code in github</a></p>
-</section>
-
-<style lang="postcss">
-    h1 {
-        @apply font-bold text-2xl;
-    }
+  div.c-header {
+    height: var(--header-height);
+    overflow-y: auto;
+    @apply bg-gray-200;
+    padding-left: var(--header-padding);
+  }
+  div.c-content {
+    height: var(--content-height);
+  }
+  div.c-footer {
+    height: var(--footer-height);
+    overflow-y: auto;
+  }
 </style>
+
+<div class="c-page">
+  <div class="c-header">
+    <h1 class="font-bold">A Markdown Blog with Svelte + Firebase + PageJs + TailsindCSS</h1>
+    <Navbar />
+    <hr />
+  </div>
+  <div class="c-content">
+    <RoutedPage />
+  </div>
+  <div class="c-footer">
+    <hr />
+    <p>
+      <a href="https://github.com/kkibria/svelte-page-blog">source code in github</a>
+    </p>
+  </div>
+</div>

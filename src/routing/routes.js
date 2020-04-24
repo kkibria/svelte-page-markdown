@@ -5,6 +5,7 @@ import Private from "../pages/Private.svelte";
 import Login from "../pages/Login.svelte";
 import Error from "../pages/Error.svelte";
 import Todo from "../pages/Todo.svelte"
+import MdEdit from "../pages/MdEdit.svelte"
 
 export default [
   {
@@ -27,6 +28,11 @@ export default [
   {
     path: "/private",
     component: Private,
+    auth: true
+  },
+  {
+    path: "/mdedit/:id",
+    component: MdEdit,
     auth: true
   },
   {
