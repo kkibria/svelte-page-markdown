@@ -9,17 +9,11 @@
   header {
     padding-top: 1em;
   }
-  .btn {
-    @apply font-bold px-4 py-2 rounded;
-  }
-  .btn-blue {
-    @apply bg-blue-500 text-white;
-  }
-  .btn-blue:hover {
-    @apply bg-blue-700;
-  }
   nav a {
-    @apply btn btn-blue mr-4 no-underline;
+    @apply bg-blue-500 text-white mr-4 no-underline font-bold px-4 py-2 rounded;
+  }
+  nav a:hover {
+    @apply bg-blue-700;
   }
 </style>
 
