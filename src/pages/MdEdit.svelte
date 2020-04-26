@@ -1,5 +1,5 @@
 <script>
-  import md from "../.gen-js/md-scrl-sync.js";
+  import md from "../.gen-js/mdscrl-sync.js";
 
   let source = md.testSnippet;
   let markdown;
