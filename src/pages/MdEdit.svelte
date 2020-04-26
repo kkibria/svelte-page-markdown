@@ -1,13 +1,13 @@
 <script>
-  import { mdInit, clearMap, testSnippet, syncResultScroll, syncSrcScroll } from "../mdinit";
+  import md from "../.gen-js/md-scrl-sync.js";
 
-  let source = testSnippet;
+  let source = md.testSnippet;
   let markdown;
 
   let srcEl;
   let rsltEl;
 
-  var mdHtml = mdInit("c-src", "c-html");
+  md.createMd(".c-src", ".c-html");
 
   let timer, timerSrc, timerRslt;
   let srcScroll = true;
@@ -15,8 +15,8 @@
   $: updateResult(source);
 
   const updateResult = src => {
-    markdown = mdHtml.render(src);
-    clearMap();
+    markdown = md.render(src);
+    md.clearMap();
   };
 
   const debounce = e => {
@@ -27,10 +27,10 @@
   };
 
   const handleSrcScroll = e => {
-    if (!srcScroll) {
+    if (srcScroll) {
       clearTimeout(timerSrc);
       timerSrc = setTimeout(() => {
-        syncResultScroll();
+        md.syncResultScroll();
       }, 50);
     }
   }
@@ -39,7 +39,7 @@
     if (!srcScroll) {
       clearTimeout(timerRslt);
       timerRslt = setTimeout(() => {
-        syncSrcScroll(e);
+        md.syncSrcScroll(e);
       }, 50);
     }
   }
@@ -65,7 +65,7 @@
 </style>
 
 <svelte:window
-  on:resize={clearMap} />
+  on:resize={md.clearMap} />
 
 <div class="c-page h-full">
   <header class="c-header text-center font-bold">
