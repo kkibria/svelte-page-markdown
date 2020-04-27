@@ -1,12 +1,16 @@
 <script>
   import md from ".gen-js/mdscrl-sync.js";
   import Hl from "./Highlightcss.svelte";
+  
+  import { onMount } from 'svelte';
 
-  let source;
+  let source = '';
   let markdown;
 
   let srcEl;
   let rsltEl;
+
+ 	onMount(() => srcEl.focus())
 
   md.createMd(".c-src", ".c-html");
   //md.createMd(srcEl, rsltEl);
@@ -57,7 +61,7 @@
 <style>
   @import "./md.css";
   div.c-page {
-    --header-height: 3%;
+    --header-height: 1.5rem;
     --footer-height: 0%;
     --content-height: calc(100% - var(--header-height) - var(--footer-height));
   }
@@ -85,6 +89,7 @@
   <div class="c-content flex">
     <div class="c-md w-1/3">
       <textarea
+        placeholder="Enter content here..."
         on:keyup={debounce}
         on:paste={debounce}
         on:cut={debounce}

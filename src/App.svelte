@@ -6,13 +6,14 @@
   import Todos from "./components/Todo/Todos.svelte";
 
   import Tw from "./Tailwindcss.svelte";
+  import sg from "./Sitecss.svelte";
 </script>
 
 <style>
   div.c-page {
     height: 100vh;
-    --header-height: 10%;
-    --footer-height: 5%;
+    --header-height: 5rem;
+    --footer-height: 2rem;
     --content-height: calc(100% - var(--header-height) - var(--footer-height));
     --header-padding: 1rem;
   }
@@ -45,7 +46,6 @@
     <RoutedPage />
   </div>
   <div class="c-footer">
-    <hr />
     <p>
       <a href="https://github.com/kkibria/svelte-page-blog">Source code in Github</a>
     </p>

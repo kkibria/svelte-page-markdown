@@ -1,16 +1,16 @@
 <script>
-	import { onMount } from "svelte";
+  import { onMount } from "svelte";
 
-	export let params;
+  export let params;
 
-	const apiUrl = "https://jsonplaceholder.typicode.com/posts/";
-	let data = [];
+  const apiUrl = "https://jsonplaceholder.typicode.com/posts/";
+  let data = [];
 
-	onMount(async () => {
-	  const response = await fetch(apiUrl + params.id);
-	  data = await response.json();
-	});
+  onMount(async () => {
+    const response = await fetch(apiUrl + params.id);
+    data = await response.json();
+  });
 </script>
 
-<h1 class="font-bold">{data.title}</h1>
-<p>{ data.body}</p>
+<h1 class="pg-heading">{data.title}</h1>
+<p>{data.body}</p>

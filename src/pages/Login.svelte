@@ -10,14 +10,29 @@
     }
 </script>
 
+<style>
+  .btn {
+    @apply font-bold py-2 px-4 rounded;
+  }
+  .btn-blue {
+    @apply bg-blue-500 text-white;
+  }
+  .btn-blue:hover {
+    @apply bg-blue-700;
+  }
+</style>
 
-<h1>Login Page</h1>
+<h1 class="pg-heading">Login Page</h1>
 
 {#if user}
     <Profile {...user} />
-    <button on:click={ () => auth.signOut() }>Logout</button>
+    <button class="btn btn-blue"
+        on:click={ () => auth.signOut() }>
+        Logout
+    </button>
 {:else}
-	<button on:click={login}>
+	<button class="btn btn-blue"
+        on:click={login}>
 		Signin with Google
 	</button>
 {/if}

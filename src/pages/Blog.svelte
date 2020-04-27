@@ -1,20 +1,21 @@
 <script>
-	import { onMount } from "svelte";
+  import { onMount } from "svelte";
 
-	const apiUrl = "https://jsonplaceholder.typicode.com/posts/";
-	let data = [];
+  const apiUrl = "https://jsonplaceholder.typicode.com/posts/";
+  let data = [];
 
-	onMount(async () => {
-	  const response = await fetch(apiUrl);
-	  data = await response.json();
-	});
+  onMount(async () => {
+    const response = await fetch(apiUrl);
+    data = await response.json();
+  });
 </script>
 
-<h1 class="font-bold">Blog</h1>
+<h1 class="pg-heading">Blog</h1>
 
-{#each data as item }
-    <div>
-        <h5><a href="/blog/{item.id}">{item.title}</a></h5>
-    </div>
+{#each data as item}
+  <div>
+    <h5>
+      <a href="/blog/{item.id}">{item.title}</a>
+    </h5>
+  </div>
 {/each}
-
