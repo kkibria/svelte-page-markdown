@@ -59,10 +59,8 @@ function createMd (s, r) {
   resultClass = r;
 
   if (defaults._strict) {
-    // mdHtml = window.markdownit('commonmark');
     mdHtml = new MarkdownIt('commonmark');
   } else {
-    // mdHtml = window.markdownit(defaults)
     mdHtml = new MarkdownIt(defaults)
       .use(require('markdown-it-abbr'))
       .use(require('markdown-it-container'), 'warning')
@@ -230,46 +228,10 @@ function clearMap () {
   scrollMap = null;
 }
 
-const testSnippet = `
-# H1 heading
-
-## H2 heading
-
-### H3 heading
-
-#### H1 heading
-
-##### H2 heading
-
-###### H3 heading
-
-
----
-
-**bold text**
-
-*italicized text*
-
-***italicized bold text***
-
----
-
-1. First item
-2. Second item
-3. Third item
-
-- First item
-- Second item
-- Third item
-
-[Svelte](https://svelte.dev/)
-`;
-
 module.exports.createMd = createMd;
 module.exports.syncResultScroll = syncResultScroll;
 module.exports.syncSrcScroll = syncSrcScroll;
 module.exports.clearMap = clearMap;
-module.exports.testSnippet = testSnippet;
 module.exports.render = (src) => {
   return mdHtml.render(src);
 }

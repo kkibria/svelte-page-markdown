@@ -2,7 +2,7 @@
   import md from ".gen-js/mdscrl-sync.js";
   import Hl from "./Highlightcss.svelte";
 
-  let source = md.testSnippet;
+  let source;
   let markdown;
 
   let srcEl;
