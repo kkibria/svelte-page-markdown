@@ -37,7 +37,7 @@
 
 <div class="c-page">
   <div class="c-header">
-    <h1 class="font-bold">A Markdown Blog with Svelte + Firebase + PageJs + TailsindCSS</h1>
+    <h1 class="font-bold">A Markdown Blog with Svelte + Firebase + PageJs + TailwindCSS + Markdown-it</h1>
     <Navbar />
     <hr />
   </div>
