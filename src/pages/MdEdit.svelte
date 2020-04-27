@@ -33,7 +33,7 @@
         md.syncResultScroll();
       }, 50);
     }
-  }
+  };
 
   const handleRsltScroll = e => {
     if (!srcScroll) {
@@ -42,10 +42,11 @@
         md.syncSrcScroll(e);
       }, 50);
     }
-  }
+  };
 </script>
 
 <style>
+  @import "./md.css";
   div.c-page {
     --header-height: 3%;
     --footer-height: 0%;
@@ -64,8 +65,7 @@
   }
 </style>
 
-<svelte:window
-  on:resize={md.clearMap} />
+<svelte:window on:resize={md.clearMap} />
 
 <div class="c-page h-full">
   <header class="c-header text-center font-bold">
@@ -75,9 +75,13 @@
   <div class="c-content flex">
     <div class="c-md w-1/2">
       <textarea
-        on:keyup paste cut mouseup={debounce}
+        on:keyup
+        paste
+        cut
+        mouseup={debounce}
         on:scroll={handleSrcScroll}
-        on:touchstart mouseover={function(e) {
+        on:touchstart
+        mouseover={function(e) {
           srcScroll = true;
         }}
         bind:value={source}
@@ -87,8 +91,9 @@
 
     <div class="w-1/2">
       <div
-        on:scroll={handleRsltScroll }
-        on:touchstart mouseover={function(e) {
+        on:scroll={handleRsltScroll}
+        on:touchstart
+        mouseover={function(e) {
           srcScroll = false;
         }}
         bind:this={rsltEl}

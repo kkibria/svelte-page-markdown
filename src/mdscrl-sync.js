@@ -294,11 +294,20 @@ const testSnippet = `
 
 ### H3 heading
 
+#### H1 heading
+
+##### H2 heading
+
+###### H3 heading
+
+
 ---
 
 **bold text**
 
 *italicized text*
+
+***italicized bold text***
 
 ---
 

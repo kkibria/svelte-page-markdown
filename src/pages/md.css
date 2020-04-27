@@ -1,0 +1,48 @@
+/* tailwind css for markdown in svelte*/
+
+.md-heading {
+  @apply block font-bold mb-4;
+}
+
+.md-list {
+  @apply pl-16 pr-16 mb-4;
+}
+
+.c-html {
+  :global(h1) {
+    @apply md-heading text-4xl;
+  }
+  :global(h2) {
+    @apply md-heading text-2xl;
+  }
+  :global(h3) {
+    @apply md-heading text-xl;
+  }
+  :global(h4) {
+    @apply md-heading text-base;
+  }
+  :global(h5) {
+    @apply md-heading text-sm;
+  }
+  :global(h6) {
+    @apply md-heading text-xs;
+  }
+  :global(ol) {
+    @apply md-list list-decimal;
+  }
+  :global(ul) {
+    @apply md-list list-disc;
+  }
+  :global(p) {
+    @apply mb-4;
+  }
+  :global(hr) {
+    @apply mb-4;
+  }
+  :global(a) {
+    @apply text-blue-600;
+  }
+  :global(a:hover) {
+    @apply underline;
+  }
+}
