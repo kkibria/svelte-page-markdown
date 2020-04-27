@@ -4,7 +4,7 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "pre-build": "browserify src/mdscrl-sync.js --s md -o src/.gen-js/mdscrl-sync.js"
+    "pre-build": "browserify src/mdedit/mdscrl-sync.js --s md -o src/mdedit/.gen-js/mdscrl-sync.js"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.0",

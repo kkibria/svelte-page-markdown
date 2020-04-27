@@ -1,5 +1,5 @@
 <script>
-  import md from "../.gen-js/mdscrl-sync.js";
+  import md from ".gen-js/mdscrl-sync.js";
 
   let source = md.testSnippet;
   let markdown;
@@ -8,6 +8,7 @@
   let rsltEl;
 
   md.createMd(".c-src", ".c-html");
+  //md.createMd(srcEl, rsltEl);
 
   let timer, timerSrc, timerRslt;
   let srcScroll = true;
@@ -24,6 +25,13 @@
     timer = setTimeout(() => {
       source = e.target.value;
     }, 300);
+  };
+
+  const fromSrc = e => {
+    srcScroll = true;
+  };
+  const fromRslt = e => {
+    srcScroll = false;
   };
 
   const handleSrcScroll = e => {
@@ -73,29 +81,30 @@
   </header>
 
   <div class="c-content flex">
-    <div class="c-md w-1/2">
+    <div class="c-md w-1/3">
       <textarea
-        on:keyup
-        paste
-        cut
-        mouseup={debounce}
+        on:keyup={debounce}
+        on:paste={debounce}
+        on:cut={debounce}
+        on:mouseup={debounce}
+
+        on:touchstart={fromSrc}
+        on:mouseover={fromSrc}
+
         on:scroll={handleSrcScroll}
-        on:touchstart
-        mouseover={function(e) {
-          srcScroll = true;
-        }}
+
         bind:value={source}
         bind:this={srcEl}
         class="c-src c-panel border-black-500 bg-gray-200" />
     </div>
 
-    <div class="w-1/2">
+    <div class="w-2/3">
       <div
         on:scroll={handleRsltScroll}
-        on:touchstart
-        mouseover={function(e) {
-          srcScroll = false;
-        }}
+
+        on:touchstart={fromRslt} 
+        on:mouseover={fromRslt}
+
         bind:this={rsltEl}
         class="c-html c-panel border-black-500">
         {@html markdown}

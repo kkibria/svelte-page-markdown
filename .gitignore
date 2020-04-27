@@ -5,4 +5,4 @@
 /.firebase/
 package-lock.json
 firebase-debug.log
-/src/.gen-js/
+/src/**/.gen-js/
