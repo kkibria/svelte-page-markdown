@@ -24,7 +24,7 @@
     {#if user}
       <a href="/todo">Todo</a>
       <a href="/private">Secret Page</a>
-      <a href="/mdedit">Markdown Edit</a>
+      <a href="/mdedit/0">Markdown Edit</a>
     {/if}
     <a href="/login">Login</a>
   </nav>
