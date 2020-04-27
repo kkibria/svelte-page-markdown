@@ -1,5 +1,6 @@
 <script>
   import md from ".gen-js/mdscrl-sync.js";
+  import Hl from "./Highlightcss.svelte";
 
   let source = md.testSnippet;
   let markdown;
@@ -75,6 +76,7 @@
 
 <svelte:window on:resize={md.clearMap} />
 
+<Hl/>
 <div class="c-page h-full">
   <header class="c-header text-center font-bold">
     <h1>Content editor</h1>

@@ -5,7 +5,7 @@
   import RoutedPage from "./routing/RoutedPage.svelte";
   import Todos from "./components/Todo/Todos.svelte";
 
-  import Tailwindcss from "./Tailwindcss.svelte";
+  import Tw from "./Tailwindcss.svelte";
 </script>
 
 <style>
