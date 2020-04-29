@@ -1,7 +1,5 @@
-> Note:  goal is to trun this into a small blogging app
-
-This is a sample todo svelte + page.js + firebase app template inspired by a [fireship.io](https://fireship.io) article "[Svelte Realtime Todo List with Firebase](https://fireship.io/lessons/svelte-v3-overview-firebase/)" by [Jeff Delaney](https://fireship.io/contributors/jeff-delaney/).
-You can use this template as starter project for your svelte firebase app. 
+This is a sample todo list app using svelte + page.js + firebase + markdown. This template was inspired from a [fireship.io](https://fireship.io) article "[Svelte Realtime Todo List with Firebase](https://fireship.io/lessons/svelte-v3-overview-firebase/)" by [Jeff Delaney](https://fireship.io/contributors/jeff-delaney/).
+You can use this template as a starter project for your svelte firebase app. 
 
 # Setup
 First go to firebase console and create a project ``my-svelte-todo-app`` and add a web app.
@@ -63,8 +61,6 @@ Install the dependencies,
 ```bash
 npm install
 ```
-
-
 Start [Rollup](https://rollupjs.org),
 
 ```bash
