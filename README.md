@@ -2,7 +2,7 @@ This is a sample todo list app using svelte + page.js + firebase + markdown. Thi
 You can use this template as a starter project for your svelte firebase app. 
 
 # Setup
-First go to firebase console and create a project ``my-svelte-todo-app`` and add a web app.
+First go to firebase console and create a project ``my-svelte-page-app`` and add a web app.
 Set up and initialize firestore. Following firebase documentation.
 Now lets get the coding started.
 Copy this template using degit to copy template on your machine.
