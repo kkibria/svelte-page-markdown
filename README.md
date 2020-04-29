@@ -7,8 +7,8 @@ Set up and initialize firestore. Following firebase documentation.
 Now lets get the coding started.
 Copy this template using degit to copy template on your machine.
 ```bash
-npx degit kkibria/svelte-page-blog my-svelte-blog-app
-cd my-svelte-blog-app
+npx degit kkibria/svelte-page-markdown my-svelte-page-app
+cd my-svelte-page-app
 ```
 
 ## Add firebase to your code 
