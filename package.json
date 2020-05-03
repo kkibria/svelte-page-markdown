@@ -2,7 +2,7 @@
   "name": "svelte-app",
   "version": "1.0.0",
   "scripts": {
-    "build": "rollup -c",
+    "build": "npm run pre-build && rollup -c",
     "dev": "rollup -c -w",
     "pre-build": "browserify src/mdedit/mdscrl-sync.js --s md -o src/mdedit/.gen-js/mdscrl-sync.js"
   },
